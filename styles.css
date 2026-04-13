@@ -23,6 +23,7 @@ body {
   color: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100svh;
 }
 
 img,
@@ -307,6 +308,8 @@ body::before {
   border: 1px solid transparent;
   text-decoration: none;
   transition: box-shadow 0.3s ease, border 0.3s ease;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn.primary {
@@ -455,6 +458,10 @@ body::before {
 .section {
   padding: 90px 6vw;
   border-bottom: 1px solid var(--grey-1);
+}
+
+section {
+  scroll-margin-top: 96px;
 }
 
 .section-title {
@@ -918,12 +925,20 @@ textarea:focus {
     min-height: auto;
     padding-top: 80px;
   }
+  .hero-visual {
+    min-height: 260px;
+  }
   .hero-cta {
     flex-direction: column;
   }
   .hero-cta .btn {
     width: 100%;
     text-align: center;
+  }
+  .project-footer .btn {
+    display: block;
+    width: 100%;
+    line-height: 1.4;
   }
   .project-header {
     flex-direction: column;
@@ -935,6 +950,35 @@ textarea:focus {
   }
   .section-eyes {
     transform: scale(0.9);
+  }
+  .hero-visual .eyes {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  .hero-visual .eyes .eye {
+    width: 50px;
+    height: 28px;
+  }
+  .hero-visual .eyes .pupil {
+    width: 12px;
+    height: 12px;
+  }
+  .eyes {
+    gap: 18px;
+  }
+  .eye {
+    width: 64px;
+    height: 34px;
+  }
+  .pupil {
+    width: 16px;
+    height: 16px;
   }
   .cert-tabs {
     gap: 8px;
@@ -955,6 +999,84 @@ textarea:focus {
   }
   .cursor-glow {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    gap: 32px;
+  }
+  .skills-grid,
+  .project-grid,
+  .cert-grid,
+  .about-grid,
+  .experience-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title p {
+    max-width: 100%;
+  }
+  .hero-links {
+    grid-template-columns: 1fr;
+  }
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cert-tabs {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 12px 4vw;
+  }
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+  .logo span {
+    font-size: 0.85rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 9vw, 2.8rem);
+  }
+  .subtitle-line {
+    font-size: clamp(0.7rem, 3.2vw, 0.9rem);
+  }
+  .typing-line {
+    font-size: clamp(1rem, 4.2vw, 1.3rem);
+  }
+  .hero h2 {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+  .eyes {
+    gap: 14px;
+  }
+  .eye {
+    width: 56px;
+    height: 30px;
+  }
+  .pupil {
+    width: 14px;
+    height: 14px;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+  .hero-link-card {
+    padding: 14px 16px;
+  }
+  .section {
+    padding: 56px 5vw;
+  }
+  section {
+    scroll-margin-top: 88px;
   }
 }
 
