@@ -1,17 +1,10 @@
-﻿const cursorGlow = document.querySelector('.cursor-glow');
-<<<<<<< HEAD
-=======
-const cursorDot = document.querySelector('.cursor-dot');
->>>>>>> 2909d783b425ce064a22cb282daa9da046db5865
+const cursorGlow = document.querySelector('.cursor-glow');
 const pupils = document.querySelectorAll('.pupil');
 const revealEls = document.querySelectorAll('.reveal');
 const bars = document.querySelectorAll('.bar');
 const nav = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav a[data-section]');
-<<<<<<< HEAD
 const navToggle = document.querySelector('.nav-toggle');
-=======
->>>>>>> 2909d783b425ce064a22cb282daa9da046db5865
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const trackedSelectors = [
@@ -39,13 +32,6 @@ const updatePointer = () => {
     cursorGlow.style.left = `${mouseX}px`;
     cursorGlow.style.top = `${mouseY}px`;
   }
-<<<<<<< HEAD
-=======
-  if (cursorDot) {
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-  }
->>>>>>> 2909d783b425ce064a22cb282daa9da046db5865
 
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
@@ -114,7 +100,6 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-<<<<<<< HEAD
 if (nav && navToggle) {
   navToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
@@ -137,8 +122,6 @@ if (nav && navToggle) {
   });
 }
 
-=======
->>>>>>> 2909d783b425ce064a22cb282daa9da046db5865
 function initParticles() {
   if (prefersReducedMotion) return;
   const canvas = document.getElementById('particle-canvas');
@@ -326,8 +309,4 @@ function initSphere() {
 }
 
 initParticles();
-<<<<<<< HEAD
 initSphere();
-=======
-initSphere();
->>>>>>> 2909d783b425ce064a22cb282daa9da046db5865
